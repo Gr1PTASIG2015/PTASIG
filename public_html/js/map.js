@@ -10,6 +10,7 @@ function init(){
 
             source: new ol.source.OSM()
         });  
+    
     var params = {
         LAYERS: 'PTASIG:pgrouting',
         FORMAT: 'image/png'
@@ -109,5 +110,14 @@ function init(){
     var omeuControloZoomSlider = new ol.control.ZoomSlider();
     map.addControl(omeuControloZoomSlider);
     //Este controlo ajuda também a fazer zoom, também
+    
+    var botaoLimpar = document.getElementById('limpar');
+    botaoLimpar.addEventListener('click', function(event) {
+        // Fazer reset ás entidades "ponto inicial" e "ponto destino".
+        pontoInicial.setGeometry(null);
+        pontoDestino.setGeometry(null);
+        // Remover layer "resultado".
+        map.removeLayer(resultado);
+    });
 
 }
