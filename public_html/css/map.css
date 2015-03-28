@@ -7,8 +7,14 @@ and open the template in the editor.
     Created on : 22/mar/2015, 14:33:18
     Author     : F
 */
-
+html,body{
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 .map {
     width: 100%;
     height: 100%;
 }
+
