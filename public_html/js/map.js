@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 function init(){
-    
+    //TESTE COMMINT 
 
     var LayerOSM = new ol.layer.Tile({
 
